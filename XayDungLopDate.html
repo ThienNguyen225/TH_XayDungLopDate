@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành xây dựng lớp Date</title>
+</head>
+<body>
+<h4>Thuc hanh xay dung lop Date</h4>
+<script>
+    function Date (day1, month, year) {
+        let day = day1;
+        this.month = month;
+        this.year = year;
+        this.getDay = function () {
+            return day;
+        };
+        this.getMonth = function () {
+            return this.month;
+        };
+        this.getYear = function () {
+            return this.year;
+        };
+        this.setDay = function (day) {
+            this.yourday = day;
+        };
+        this.setMonth = function (month) {
+            this.month = month;
+        };
+        this.setYear = function (year){
+            this.year = year;
+        }
+    }
+    var ngayTest = new Date(1,1,2019);
+    let ngay1 = ngayTest.getDay();
+    let thang1 = ngayTest.getMonth();
+    let nam1 = ngayTest.getYear();
+    alert(ngay1 +" day, "+ thang1 +",month "+nam1+ " nam" );
+</script>
+</body>
+</html>
